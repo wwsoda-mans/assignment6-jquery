@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6 - Modifying Attributes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2>jQuery Assignment</h2>
+        <a href="index.html">Home</a>
+        <a href="task1.html">Task 1</a>
+        <a href="task2.html">Task 2</a>
+        <a href="task3.html">Task 3</a>
+        <a href="task4.html">Task 4</a>
+        <a href="task5.html">Task 5</a>
+        <a href="task6.html">Task 6</a>
+        <a href="task7.html">Task 7</a>
+        <a href="task8.html">Task 8</a>
+        <a href="task9.html">Task 9</a>
+        <a href="task10.html">Task 10</a>
+        <a href="task11.html">Task 11</a>
+    </nav>
+
+    <main>
+        <h1>Task 6: Modifying Attributes</h1>
+        <p>Practice changing image and link attributes using jQuery.</p>
+
+        <div class="card">
+            <h3>Change Image</h3>
+
+            <img id="myImage" src="https://picsum.photos/id/1018/500/300" alt="Mountain landscape"
+                style="width: 100%; max-width: 500px; border-radius: 10px;">
+
+            <br>
+
+            <button id="imageButton">Change Image</button>
+        </div>
+
+        <div class="card">
+            <h3>Change Link</h3>
+
+            <p>
+                <a id="myLink" href="https://www.google.com" target="_blank">
+                    Visit Google
+                </a>
+            </p>
+
+            <button id="linkButton">Change Link</button>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#imageButton").click(function () {
+                $("#myImage").attr("src", "https://picsum.photos/id/1015/500/300");
+            });
+
+            $("#linkButton").click(function () {
+                $("#myLink").attr("href", "https://www.instagram.com/wwsoda_?srtk=MTR4dTc3enQ2NzdpaA%3D%3D&utm_source=qr");
+                $("#myLink").text("Visit My Instagram");
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

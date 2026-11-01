@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3 - Fade Methods</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2>jQuery Assignment</h2>
+        <a href="index.html">Home</a>
+        <a href="task1.html">Task 1</a>
+        <a href="task2.html">Task 2</a>
+        <a href="task3.html">Task 3</a>
+        <a href="task4.html">Task 4</a>
+        <a href="task5.html">Task 5</a>
+        <a href="task6.html">Task 6</a>
+        <a href="task7.html">Task 7</a>
+        <a href="task8.html">Task 8</a>
+        <a href="task9.html">Task 9</a>
+        <a href="task10.html">Task 10</a>
+        <a href="task11.html">Task 11</a>
+    </nav>
+
+    <main>
+        <h1>Task 3: Fade Methods</h1>
+        <p>Practice fadeIn, fadeOut and fadeToggle methods.</p>
+
+        <div class="card">
+            <h3>Image Effects</h3>
+
+            <img id="fadeImage" src="https://picsum.photos/id/1018/600/350" alt="Beautiful mountain landscape"
+                style="width: 100%; max-width: 500px; border-radius: 10px; display: none;">
+
+            <br>
+
+            <button id="fadeInButton">Fade In</button>
+            <button id="fadeOutButton">Fade Out</button>
+            <button id="fadeToggleButton">Fade Toggle</button>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#fadeInButton").click(function () {
+                $("#fadeImage").fadeIn(1000);
+            });
+
+            $("#fadeOutButton").click(function () {
+                $("#fadeImage").fadeOut(1000);
+            });
+
+            $("#fadeToggleButton").click(function () {
+                $("#fadeImage").fadeToggle(1000);
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

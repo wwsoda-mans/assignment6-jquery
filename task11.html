@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 11 - Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        #largeImage {
+            display: none;
+            width: 100%;
+            max-width: 600px;
+            margin-top: 25px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h2>jQuery Assignment</h2>
+        <a href="index.html">Home</a>
+        <a href="task1.html">Task 1</a>
+        <a href="task2.html">Task 2</a>
+        <a href="task3.html">Task 3</a>
+        <a href="task4.html">Task 4</a>
+        <a href="task5.html">Task 5</a>
+        <a href="task6.html">Task 6</a>
+        <a href="task7.html">Task 7</a>
+        <a href="task8.html">Task 8</a>
+        <a href="task9.html">Task 9</a>
+        <a href="task10.html">Task 10</a>
+        <a href="task11.html">Task 11</a>
+    </nav>
+
+    <main>
+        <h1>Task 11: Image Gallery</h1>
+        <p>Interactive image gallery using jQuery effects.</p>
+
+        <div class="card">
+            <h3>My Photo Gallery</h3>
+
+            <div class="gallery">
+                <img class="thumbnail"
+                     src="https://picsum.photos/id/1015/400/300"
+                     alt="Mountain">
+
+                <img class="thumbnail"
+                     src="https://picsum.photos/id/1018/400/300"
+                     alt="Nature">
+
+                <img class="thumbnail"
+                     src="https://picsum.photos/id/1019/400/300"
+                     alt="Landscape">
+            </div>
+
+            <img id="largeImage" src="" alt="Selected image">
+
+            <br>
+
+            <button id="fadeButton">Fade Gallery</button>
+            <button id="showButton">Show Gallery</button>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $(".thumbnail").click(function() {
+                let imageSource = $(this).attr("src");
+
+                $("#largeImage").attr("src", imageSource);
+                $("#largeImage").stop(true, true).fadeIn(500).animate({
+                    width: "600px"
+                }, 500);
+            });
+
+            $("#fadeButton").click(function() {
+                $(".thumbnail").fadeOut(1000);
+            });
+
+            $("#showButton").click(function() {
+                $(".thumbnail").fadeIn(1000);
+            });
+
+        });
+    </script>
+
+</body>
+</html>

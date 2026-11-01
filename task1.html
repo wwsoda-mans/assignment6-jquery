@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1 - jQuery Selectors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2>jQuery Assignment</h2>
+        <a href="index.html">Home</a>
+        <a href="task1.html">Task 1</a>
+        <a href="task2.html">Task 2</a>
+        <a href="task3.html">Task 3</a>
+        <a href="task4.html">Task 4</a>
+        <a href="task5.html">Task 5</a>
+        <a href="task6.html">Task 6</a>
+        <a href="task7.html">Task 7</a>
+        <a href="task8.html">Task 8</a>
+        <a href="task9.html">Task 9</a>
+        <a href="task10.html">Task 10</a>
+        <a href="task11.html">Task 11</a>
+    </nav>
+    <main>
+        <h1>Task 1: Selectors & CSS</h1>
+        <p>Practice jQuery selectors and CSS manipulation.</p>
+
+        <div class="card">
+            <h3>1. Select by ID</h3>
+            <p id="myText">This is the original text.</p>
+            <button id="idButton">Change Text</button>
+        </div>
+
+        <div class="card">
+            <h3>2. Select by Class</h3>
+            <p class="myClass">This paragraph uses a class selector.</p>
+            <button id="classButton">Change Class Text</button>
+        </div>
+
+        <div class="card">
+            <h3>3. Select by Tag</h3>
+            <p>This is paragraph number one.</p>
+            <p>This is paragraph number two.</p>
+            <button id="tagButton">Change All Paragraphs</button>
+        </div>
+
+        <div class="card">
+            <h3>4. Change HTML Content</h3>
+            <div id="htmlContent">Original HTML content.</div>
+            <button id="htmlButton">Change HTML</button>
+        </div>
+
+        <div class="card">
+            <h3>5. Change CSS</h3>
+            <p id="styleText">Click the button to change my style.</p>
+            <button id="cssButton">Change Style</button>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#idButton").click(function () {
+                $("#myText").text("Text changed using ID selector!");
+            });
+
+            $("#classButton").click(function () {
+                $(".myClass").text("Text changed using class selector!");
+            });
+
+            $("#tagButton").click(function () {
+                $("p").css("color", "blue");
+            });
+
+            $("#htmlButton").click(function () {
+                $("#htmlContent").html("<b>HTML content changed!</b>");
+            });
+
+            $("#cssButton").click(function () {
+                $("#styleText").css({
+                    "color": "white",
+                    "background-color": "blue",
+                    "padding": "15px",
+                    "border-radius": "8px"
+                });
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

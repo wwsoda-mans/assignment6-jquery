@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 - Visibility Methods</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2>jQuery Assignment</h2>
+        <a href="index.html">Home</a>
+        <a href="task1.html">Task 1</a>
+        <a href="task2.html">Task 2</a>
+        <a href="task3.html">Task 3</a>
+        <a href="task4.html">Task 4</a>
+        <a href="task5.html">Task 5</a>
+        <a href="task6.html">Task 6</a>
+        <a href="task7.html">Task 7</a>
+        <a href="task8.html">Task 8</a>
+        <a href="task9.html">Task 9</a>
+        <a href="task10.html">Task 10</a>
+        <a href="task11.html">Task 11</a>
+    </nav>
+    <main>
+        <h1>Task 2: Visibility Methods</h1>
+        <p>Practice hide, show and toggle methods using jQuery.</p>
+
+        <div class="card">
+            <h3>Visibility Control</h3>
+
+            <p id="visibilityText">
+                Hello! You can hide, show or toggle this paragraph.
+            </p>
+
+            <button id="hideButton">Hide</button>
+            <button id="showButton">Show</button>
+            <button id="toggleButton">Toggle</button>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#hideButton").click(function () {
+                $("#visibilityText").hide();
+            });
+
+            $("#showButton").click(function () {
+                $("#visibilityText").show();
+            });
+
+            $("#toggleButton").click(function () {
+                $("#visibilityText").toggle();
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

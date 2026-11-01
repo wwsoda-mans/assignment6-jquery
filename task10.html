@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10 - Combined Animation</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: #3157a4;
+            position: relative;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h2>jQuery Assignment</h2>
+        <a href="index.html">Home</a>
+        <a href="task1.html">Task 1</a>
+        <a href="task2.html">Task 2</a>
+        <a href="task3.html">Task 3</a>
+        <a href="task4.html">Task 4</a>
+        <a href="task5.html">Task 5</a>
+        <a href="task6.html">Task 6</a>
+        <a href="task7.html">Task 7</a>
+        <a href="task8.html">Task 8</a>
+        <a href="task9.html">Task 9</a>
+        <a href="task10.html">Task 10</a>
+        <a href="task11.html">Task 11</a>
+    </nav>
+
+    <main>
+        <h1>Task 10: Combined Animation</h1>
+        <p>Combine opacity, size and movement in one animation.</p>
+
+        <div class="card">
+            <h3>Combined Animation Box</h3>
+
+            <div id="box"></div>
+
+            <button id="startButton">Start Animation</button>
+            <button id="resetButton">Reset</button>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $("#startButton").click(function() {
+                $("#box").animate({
+                    width: "200px",
+                    height: "200px",
+                    left: "150px",
+                    opacity: 0.3
+                }, 2000);
+            });
+
+            $("#resetButton").click(function() {
+                $("#box").stop(true, true).css({
+                    width: "100px",
+                    height: "100px",
+                    left: "0px",
+                    opacity: 1
+                });
+            });
+
+        });
+    </script>
+
+</body>
+</html>
